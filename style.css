@@ -1,0 +1,486 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid #3498db;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.contact-info, .skills, .languages, .personal-info {
+    margin-bottom: 2rem;
+}
+
+.contact-info h3, .skills h3, .languages h3, .personal-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info h3::after, .skills h3::after, .languages h3::after, .personal-info h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: #3498db;
+}
+
+.contact-info ul, .languages ul, .personal-info ul {
+    list-style: none;
+}
+
+.contact-info li, .languages li, .personal-info li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.languages span {
+    color: #3498db;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-top: 0.3rem;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: #3498db;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Content */
+.content {
+    width: 70%;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+.about p {
+    text-align: justify;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2.4rem;
+    top: 0.3rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3498db;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #3498db;
+}
+
+.timeline-date {
+    font-weight: 500;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.achievements {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.achievements li {
+    margin-bottom: 0.3rem;
+}
+
+/* Certificações */
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cert-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.cert-item ul {
+    padding-left: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.cert-item li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Portfólio */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(44, 62, 80, 0.9);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.portfolio-overlay p {
+    font-size: 0.9rem;
+    color: #3498db;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #e0e0e0;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Habilidades Detalhadas */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.skill-card ul {
+    padding-left: 1.2rem;
+}
+
+.skill-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Botão de Impressão */
+.print-btn {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#printCV {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+}
+
+#printCV:hover {
+    background: #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+    
+    .sidebar, .content {
+        width: 100%;
+    }
+    
+    .sidebar {
+        padding-bottom: 1rem;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-container, .portfolio-container, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-filter {
+        flex-wrap: wrap;
+    }
+}
+
+/* Estilos para impressão */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    .print-btn, .portfolio-filter {
+        display: none;
+    }
+    
+    .sidebar {
+        background: #f5f5f5;
+        color: #333;
+    }
+    
+    .contact-info h3::after, .skills h3::after, .languages h3::after, .personal-info h3::after {
+        background: #333;
+    }
+    
+    .skill-level {
+        background: #333;
+    }
+    
+    .timeline::before {
+        background: #ccc;
+    }
+    
+    .timeline-dot {
+        background: #333;
+        box-shadow: 0 0 0 2px #333;
+    }
+    
+    .portfolio-item {
+        page-break-inside: avoid;
+    }
+    
+    .portfolio-overlay {
+        position: static;
+        transform: none;
+        background: #f5f5f5;
+        color: #333;
+    }
+}
+
+/* Animações para timeline */
+.timeline-item-hidden {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
